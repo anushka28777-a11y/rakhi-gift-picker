@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rakhi Gift Picker 🎁</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            min-height: 100vh;
+
+            background:
+                radial-gradient(circle at top left, #ffd6e7, transparent 35%),
+                radial-gradient(circle at bottom right, #ffe8b6, transparent 35%),
+                linear-gradient(135deg, #fff5f8, #fffaf0);
+
+            color: #3b2530;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* TOP SECTION */
+
+        .hero {
+            text-align: center;
+            padding: 25px 10px 35px;
+        }
+
+        .rakhi {
+            font-size: 55px;
+            animation: float 2s infinite ease-in-out;
+        }
+
+        @keyframes float {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin: 12px 0;
+        }
+
+        .hero h1 span {
+            color: #e83e78;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #765866;
+            line-height: 1.6;
+        }
+
+        /* MAIN CARD */
+
+        .main-card {
+            background: rgba(255,255,255,0.9);
+            border-radius: 30px;
+            padding: 35px;
+            box-shadow: 0 20px 50px rgba(120, 50, 80, 0.15);
+            border: 1px solid #ffe1ea;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .heading h2 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .heading p {
+            color: #8b6875;
+        }
+
+        /* GIFT CARDS */
+
+        .gifts {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .gift-card {
+            background: linear-gradient(145deg, #ffffff, #fff5f8);
+            border: 2px solid #ffe1ea;
+            border-radius: 22px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .gift-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(232, 62, 120, 0.15);
+            border-color: #ff9fbd;
+        }
+
+        .gift-icon {
+            font-size: 55px;
+            margin-bottom: 12px;
+        }
+
+        .gift-card h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .gift-card p {
+            color: #876c76;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+        /* BUTTON */
+
+        button {
+            background: linear-gradient(135deg, #ff4f81, #e83270);
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 7px 15px rgba(232, 50, 112, 0.25);
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(232, 50, 112, 0.35);
+        }
+
+        /* SUCCESS MESSAGE */
+
+        .success {
+            margin-top: 30px;
+            text-align: center;
+            padding: 25px;
+            background: #fff0f5;
+            border: 2px dashed #ff8eb0;
+            border-radius: 20px;
+        }
+
+        .success h2 {
+            color: #e83270;
+            margin-bottom: 10px;
+        }
+
+        .success p {
+            margin: 6px;
+            color: #704b59;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #967681;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 650px) {
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .main-card {
+                padding: 20px;
+            }
+
+            .gifts {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <!-- HERO -->
+
+    <div class="hero">
+
+        <div class="rakhi">🎀</div>
+
+        <h1>
+            Happy <span>Raksha Bandhan!</span>
+        </h1>
+
+        <p>
+            Dear ADITYA ❤️<br>
+            I've made your gift selection process<br>
+            extremely easy for you. 😌😂
+        </p>
+
+    </div>
+
+
+    <!-- MAIN CARD -->
+
+    <div class="main-card">
+
+
+        <div class="heading">
+
+            <h2>🎁 Choose My Gift</h2>
+
+            <p>
+                Choose wisely... I'll remember your choice. 👀
+            </p>
+
+        </div>
+
+
+        <div class="gifts">
+
+
+            <!-- HEADPHONES -->
+
+            <div class="gift-card">
+
+                <div class="gift-icon">🎧</div>
+
+                <h3>Headphones</h3>
+
+                <p>
+                    For my music & peaceful moments 🎶
+                </p>
+
+                <form method="POST">
+
+                    <button name="gift" value="Headphones">
+                        Choose This ❤️
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- SHOES -->
+
+            <div class="gift-card">
+
+                <div class="gift-icon">👟</div>
+
+                <h3>New Shoes</h3>
+
+                <p>
+                    Because apparently I need another pair. 😌
+                </p>
+
+                <form method="POST">
+
+                    <button name="gift" value="Shoes">
+                        Choose This ❤️
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- TUMBLER -->
+
+            <div class="gift-card">
+
+                <div class="gift-icon">🥤</div>
+
+                <h3>Cute Tumbler</h3>
+
+                <p>
+                    Because I need a cute tumbler for my drinks. 💕
+                </p>
+
+                <form method="POST">
+
+                    <button name="gift" value="Tumbler">
+                        Choose This ❤️
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- SKINCARE -->
+
+            <div class="gift-card">
+
+                <div class="gift-icon">✨</div>
+
+                <h3>Skincare</h3>
+
+                <p>
+                    Something nice for some self-care 💕
+                </p>
+
+                <form method="POST">
+
+                    <button name="gift" value="Skincare">
+                        Choose This ❤️
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- DRESSES -->
+
+            <div class="gift-card">
+
+                <div class="gift-icon">👗</div>
+
+                <h3>Pretty Dress</h3>
+
+                <p>
+                    A new dress because I can never have enough. 😌✨
+                </p>
+
+                <form method="POST">
+
+                    <button name="gift" value="Dress">
+                        Choose This ❤️
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- GIFT VOUCHER -->
+
+            <div class="gift-card">
+
+                <div class="gift-icon">💳</div>
+
+                <h3>Gift Voucher</h3>
+
+                <p>
+                    Let me choose exactly what I want. 😌
+                </p>
+
+                <form method="POST">
+
+                    <button name="gift" value="Gift Voucher">
+                        Choose This ❤️
+                    </button>
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- SUCCESS MESSAGE -->
+
+        {% if choice %}
+
+        <div class="success">
+
+            <h2>🎉 Excellent Choice! 🎉</h2>
+
+            <p>
+                You selected:
+                <strong>{{ choice }}</strong>
+            </p>
+
+            <p>
+                Now you officially have no excuse. 😂🎁
+            </p>
+
+        </div>
+
+        {% endif %}
+
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        Made with ❤️ by manager of QUIZEL🎀
+
+    </footer>
+
+
+</div>
+
+</body>
+
+</html>
+                
